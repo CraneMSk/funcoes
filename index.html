@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    
+    <div class="container">
+        <h1>
+            Funções - JavaScript
+        </h1>        
+        
+        <button class="button" onclick="toggleText()"> Mostrar / Ocultar o texto </button>
+        <p id="toggleText"> Este exemplo de texto será exibido e ocultado. </p>
+        <h2>Calculadora Simples</h2>
+        <input type="number" name="" id="num1" placeholder="Numero 1">
+        <input type="number" name="" id="num2" placeholder="Numero 2">
+        <button class="button" onclick="sumCalculate()">Calcular</button>
+        <p id="sumResult1">Soma: </p>
+        <p id="sumResult2">Subtração: </p>
+        <p id="sumResult3">Multiplicação: </p>
+        <p id="sumResult4">Divisão: </p>
+    </div>
+    
+    <script>
+        //----------Alternar Visibilidade
+        function toggleText(){
+            const text = document.getElementById("toggleText");
+            text.style.display = text.style.display ==="none" ? "block" : "none";
+        }
+
+        //--------Função Somar/
+
+        function sumCalculate(){            
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            
+            const resultado1 = num1 + num2
+            const resultado2 = num1 - num2
+            const resultado3 = num1 * num2
+            const resultado4 = num1 / num2
+
+            document.getElementById("sumResult1").innerText = resultado1;
+            document.getElementById("sumResult2").innerText = resultado2;
+            document.getElementById("sumResult3").innerText = resultado3;
+            document.getElementById("sumResult4").innerText = resultado4;
+        }
+    </script>
+    
+</body>
+</html>
